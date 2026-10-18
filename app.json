@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Finance RN",
+    "slug": "finance-app-react-native",
+    "version": "1.0.0",
+    "scheme": "financern",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F2F1F7",
+    "ios": {
+      "bundleIdentifier": "com.rafaelmedeiros.finance.rn",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use o Face ID para desbloquear o Finance."
+      }
+    },
+    "android": {
+      "package": "com.rafaelmedeiros.finance.rn",
+      "allowBackup": false,
+      "adaptiveIcon": {
+        "backgroundColor": "#6C3FC5",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 120,
+          "resizeMode": "contain",
+          "backgroundColor": "#F2F1F7",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#0C0B12"
+          }
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Use o Face ID para desbloquear o Finance."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Use o Face ID para desbloquear o Finance."
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
